@@ -51,7 +51,7 @@ func convert(url string, prettyprint *bool) {
 
 func fetchRSS(url string) *gofeed.Feed {
 	fp := gofeed.NewParser()
-	fp.UserAgent = nil
+	fp.UserAgent = "curl/8.9.1"
 	feed, err := fp.ParseURL(url)
 	if err != nil {
 		panic(err)
